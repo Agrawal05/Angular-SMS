@@ -1,0 +1,40 @@
+<!-- <div class="main">
+    <div class="flex-container flex-center">
+        <div id='calendar-container' class="flex-container flex-column flex-center">
+            <div>
+                <form [formGroup]="dateForm" class="flex-conatainer flex-center">
+                    <input type="text" placeholder="Start" formControlName="dateFrom" name="dateFrom" placeholder="From Date">
+                    <div class="width-20px"></div>
+                    <input type="text" placeholder="End" formControlName="dateTo" name="dateTo" placeholder="end Date">
+                    <div class="width-20px"></div>
+                    <button class="Primary">Reserve</button> 
+                </form>
+            </div>
+            <div *ngIf='isReserved' class='reserved'>
+                {{isReserved}}
+            </div>
+            <div class="icons flex-container flex-center-horz">
+                <div class="fa fa-chevron-left" (click)="prevMonth()"></div>
+                <div class="width-20px"></div>
+                <div class="month">{{date.format("MMMM")}} {{date.format("YYYY")}}</div>
+                <div class="width-20px"></div>
+                <div class="fa fa-chevron-right" (click)="nextMonth()"></div>
+            </div>
+            <div class="flex-container">
+                <div  class="calendar-days  flex-center">S</div>
+                <div  class="calendar-days  flex-center">M</div>
+                <div  class="calendar-days  flex-center">T</div>
+                <div  class="calendar-days  flex-center">W</div>
+                <div  class="calendar-days  flex-center">T</div>
+                <div  class="calendar-days  flex-center">F</div>
+                <div  class="calendar-days  flex-center">S</div>
+            </div>
+            <div class="flex-container flex-wrap">
+                <div *ngFor="let day of daysArray">               
+                    <div class="calendar-days  flex-center" (click)="selectedDate(day)" 
+                     [ngClass]="{'inactive': !day, 'selected': isSelected(day), 'today':todayCheck(day)}" (Click)="show_events(day)"> {{day?.date()}}  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  -->

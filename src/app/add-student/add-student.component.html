@@ -1,0 +1,47 @@
+<app-accordion [studentHeader]="'Save Student'" >
+    <div class= "container custom-container">
+        <div class="col-md-12">  
+            <div class="form-group">
+                <input type="text" [(ngModel)]="student.studentname" class="form-control" placeholder="Name">
+            </div>
+
+            <div class="form-group">
+                <input type="text" [(ngModel)]="student.course" class="form-control" placeholder="Course">
+            </div>
+    
+            <div class="form-group">
+                <input type="text" [(ngModel)]="student.fee" class="form-control" placeholder="Fee">
+            </div>
+    
+            <div class="form-group">
+               <!-- <button class="btn btn-success btn-lg btn-block" (click)="createStudent()">Create Student</button> -->
+               <app-button  [Name]="'Save Student'" [backgroundColor]="'add'" (OnClick)="createStudent()"></app-button>
+            </div>
+        </div>
+    </div>
+</app-accordion> -->
+
+<!--<div class= "container custom-container">
+    <div class="col-md-12">
+        <h3 class="mb-3 text-center">Update Student</h3>
+
+        <div class="form-group">
+            <input type="text" [(ngModel)]="student.studentname" class="form-control" placeholder="Name">
+        </div>
+
+        <div class="form-group">
+            <input type="text" [(ngModel)]="student.course" class="form-control" placeholder="Course">
+        </div>
+
+        <div class="form-group">
+            <input type="text" [(ngModel)]="student.fee" class="form-control" placeholder="Fee">
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" (click)="updateStudent()">Update Student</button>
+            <app-button [Name]="'Update Student'" (OnClick)="updateStudent(student.id)"></app-button>
+        </div>
+    </div>
+</div>
+-->
+
