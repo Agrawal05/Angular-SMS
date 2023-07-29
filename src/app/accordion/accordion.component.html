@@ -1,0 +1,15 @@
+
+<div class="container custom-container text-white bg-success">
+        <div class="row">
+            <div class="col-6">
+                {{studentHeader}}
+            </div>
+            <div class="col-6 text-end" style="text-align:right">
+                <i *ngIf="isAccordionOpen" class="fa fa-angle-down" (click)="isAccordionOpen = false" aria-hidden="true"></i>
+                <i *ngIf="!isAccordionOpen" class="fa fa-angle-up" (click)="isAccordionOpen = true" aria-hidden="false"></i>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="isAccordionOpen" class="student-content">
+       <ng-content></ng-content>
+    </div>

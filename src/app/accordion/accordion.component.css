@@ -1,0 +1,11 @@
+.container{
+    height: 50px;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.col-6{
+    margin-top: 10px;
+    font-size: large;
+}

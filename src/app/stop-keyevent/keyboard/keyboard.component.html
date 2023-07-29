@@ -1,0 +1,18 @@
+<h1>The keyboard is listening!</h1>
+
+<h2>Pressed: {{keypressed}}</h2>
+<!--
+<h4>You can't type space in here:</h4>
+<input type="text" (keydown.space)="$event.preventDefault()">
+
+<h4>You can't type enter in here:</h4>
+<textarea (keydown.enter)="$event.preventDefault()"></textarea> -->
+<!-- <app-overlay></app-overlay> -->
+
+<nav>
+    <ul class="nav-item">
+        <li class="nav__item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/stop-keyboard">stop keyboard</a>
+        </li>
+    </ul>
+</nav>
