@@ -1,0 +1,20 @@
+<h1>One way binding works!</h1>
+
+<img src="/assets/Capture.PNG" width="500">
+
+<h2>String Interpolation</h2>
+<p>{{ slogan }}</p>
+<p>{{ getSlogan }}</p>
+<p>{{ getSlogan() }}</p>
+<p> We can do calculation either {{12 + 2 / 9 -5 * 6 }}</p>
+
+<h2>Property binding</h2>
+<img [src]="source" width="500">
+<p [hidden]="displayPropertyBindingPara">Display Property Binding</p>
+
+<h2>Event binding</h2>
+<div class="d-flex">
+    <span>Search</span>
+    <input type="text" class="mx-3" (input)="changeSearchValue($event)">
+    <span>You search for "{{ searchValue }}"</span>
+</div>

@@ -23,6 +23,8 @@ import { CommentComponent } from './comment/comment.component';
 import { NestedCommentComponent } from './nested-comment/nested-comment.component';
 import { KeyboardComponent } from './stop-keyevent/keyboard/keyboard.component';
 import { DisableKeyboardDirective } from './stop-keyevent/disable-keyboard.directive';
+import { TwoWayBindingComponent } from './basics/two-way-binding/two-way-binding.component';
+import { OneWayBindingComponent } from './basics/one-way-binding/one-way-binding.component';
 
 @NgModule({
   declarations: [
@@ -44,17 +46,19 @@ import { DisableKeyboardDirective } from './stop-keyevent/disable-keyboard.direc
     NestedCommentComponent,
     KeyboardComponent,
     DisableKeyboardDirective,
+    TwoWayBindingComponent,
+    OneWayBindingComponent,
   ],
-  providers:[],
+  providers: [],
   imports: [
     BrowserModule,
     AppRoutingModule,
-     FormsModule,
+    FormsModule,
     HttpClientModule,
     NgxPaginationModule,
     ReactiveFormsModule,
     StoreModule.forRoot({})
-  ], 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
