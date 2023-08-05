@@ -1,0 +1,5 @@
+<div [ngClass]="{changeBackgroundColor: searchValue != ''}" class="d-flex">
+    <span>Search</span>
+    <input type="text" class="mx-3" [(ngModel)]="searchValue">
+    <span>You search for "{{ searchValue }}"</span>
+</div>

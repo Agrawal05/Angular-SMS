@@ -1,0 +1,8 @@
+<p>We are showing even numbers are in green and odd numbers are in red color</p>
+
+<div *ngFor="let number of numbers; let i = index">
+    <div class="d-flex" [ngStyle]="{backgroundColor: number%2 == 0 ? '#D5F5E3': '#FADBDB'}">
+        <p class="mx-2">S.No {{ i + 1}}: </p>
+        <p [ngStyle]="{color: number%2 == 0 ? 'green': 'red'}">{{ number }}</p>
+    </div>
+</div>

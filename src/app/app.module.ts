@@ -25,6 +25,11 @@ import { KeyboardComponent } from './stop-keyevent/keyboard/keyboard.component';
 import { DisableKeyboardDirective } from './stop-keyevent/disable-keyboard.directive';
 import { TwoWayBindingComponent } from './basics/two-way-binding/two-way-binding.component';
 import { OneWayBindingComponent } from './basics/one-way-binding/one-way-binding.component';
+import { NgForComponent } from './basics/directives/ng-for/ng-for.component';
+import { RouteDirectiveComponent } from './basics/directives/route-directive/route-directive.component';
+import { NgStyleComponent } from './basics/directives/ng-style/ng-style.component';
+import { NgIfComponent } from './basics/directives/ng-if/ng-if.component';
+import { NgClassComponent } from './basics/directives/ng-class/ng-class.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +53,11 @@ import { OneWayBindingComponent } from './basics/one-way-binding/one-way-binding
     DisableKeyboardDirective,
     TwoWayBindingComponent,
     OneWayBindingComponent,
+    NgForComponent,
+    RouteDirectiveComponent,
+    NgStyleComponent,
+    NgIfComponent,
+    NgClassComponent
   ],
   providers: [],
   imports: [

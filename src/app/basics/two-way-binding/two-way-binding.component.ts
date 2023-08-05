@@ -13,8 +13,4 @@ export class TwoWayBindingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changeSearchValue(event: Event): void{
-    this.searchValue = (<HTMLInputElement>event.target).value;
-  }
-
 }

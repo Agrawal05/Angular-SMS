@@ -12,6 +12,11 @@ import { CommentComponent } from './comment/comment.component';
 import { KeyboardComponent } from './stop-keyevent/keyboard/keyboard.component';
 import { OneWayBindingComponent } from './basics/one-way-binding/one-way-binding.component';
 import { TwoWayBindingComponent } from './basics/two-way-binding/two-way-binding.component';
+import { RouteDirectiveComponent } from './basics/directives/route-directive/route-directive.component';
+import { NgForComponent } from './basics/directives/ng-for/ng-for.component';
+import { NgStyleComponent } from './basics/directives/ng-style/ng-style.component';
+import { NgIfComponent } from './basics/directives/ng-if/ng-if.component';
+import { NgClassComponent } from './basics/directives/ng-class/ng-class.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'Header', pathMatch: "full" },
@@ -26,7 +31,12 @@ export const routes: Routes = [
   { path: 'comment', component: CommentComponent },
   { path: 'keyboard', component: KeyboardComponent },
   { path: 'two-way-binding', component: TwoWayBindingComponent },
-  { path: 'one-way-binding', component: OneWayBindingComponent }
+  { path: 'one-way-binding', component: OneWayBindingComponent },
+  { path: 'route-directive', component: RouteDirectiveComponent },
+  { path: 'ng-for', component: NgForComponent },
+  { path: 'ng-style', component: NgStyleComponent },
+  { path: 'ng-if', component: NgIfComponent },
+  { path: 'ng-class', component: NgClassComponent }
 ];
 
 @NgModule({
