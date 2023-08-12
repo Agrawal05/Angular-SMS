@@ -17,6 +17,7 @@ import { NgForComponent } from './basics/directives/ng-for/ng-for.component';
 import { NgStyleComponent } from './basics/directives/ng-style/ng-style.component';
 import { NgIfComponent } from './basics/directives/ng-if/ng-if.component';
 import { NgClassComponent } from './basics/directives/ng-class/ng-class.component';
+import { EditorComponent } from './editor/editor.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'Header', pathMatch: "full" },
@@ -36,7 +37,8 @@ export const routes: Routes = [
   { path: 'ng-for', component: NgForComponent },
   { path: 'ng-style', component: NgStyleComponent },
   { path: 'ng-if', component: NgIfComponent },
-  { path: 'ng-class', component: NgClassComponent }
+  { path: 'ng-class', component: NgClassComponent },
+  { path: 'editor', component: EditorComponent }
 ];
 
 @NgModule({

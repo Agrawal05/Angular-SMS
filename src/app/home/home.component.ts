@@ -8,12 +8,22 @@ import *as moment from 'moment';
 })
 
 export class HomeComponent implements OnInit {
-
+  searchData: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
+  }
 
+  searchValueData(event: string) {
+    this.searchData = event;
+  }
+
+  tabNameMatches(searchData: string): boolean {
+    console.log(searchData)
+    const tabNames = ['AddStudent', 'GetStudents', 'Calendar', 'ListEvents', 'WebCam', 'Devtool Detect', 'Comment', 'Key board', 
+    'One way binding', 'Two way binding', 'Directives', 'Editor'];
+    return tabNames.some((tabName) => tabName.toLowerCase().includes(searchData.toLowerCase()));
   }
 
 }

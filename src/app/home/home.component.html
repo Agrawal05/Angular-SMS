@@ -1,38 +1,56 @@
-<h1>Student Management</h1><br>
+<div class="d-flex justify-content-between">
+    <h1>Student Management</h1>
+    <app-search-box (searchedValueData)="searchValueData($event)"></app-search-box>
+</div>
 <nav>
     <ul class="nav-item">
-        <li class="nav__item" routerLinkActive="active">
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'AddStudent' ) ? 'red' : 'white' }">
             <a class="nav-link" routerLink="/AddStudent">AddStudent</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'GetStudents' ) ? 'red' : 'white' }">
             <a class="nav-link" routerLink="/GetStudents">GetStudents</a>
         </li>
-        <li class="nav__item" routerLinkActive="active">
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'Calendar' ) ? 'red' : 'white' }">
             <a class="nav-link" href="/Calendar">Calendar</a>
         </li>
-        <li class="nav__item" routerLinkActive="active">
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'ListEvents' ) ? 'red' : 'white' }">
             <a class="nav-link" href="/ListEvents">ListEvents</a>
         </li>
-        <li class="nav__item" routerLinkActive="active">
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'WebCam' ) ? 'red' : 'white' }">
             <a class="nav-link" routerLink="/webcam">WebCam</a>
         </li>
-        <li class="nav__item" routerLinkActive="active">
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'Devtool Detect' ) ? 'red' : 'white' }">
             <a class="nav-link" routerLink="/devtool">Devtool Detect</a>
         </li>
-        <li class="nav__item" routerLinkActive="active">
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'Comment' ) ? 'red' : 'white' }">
             <a class="nav-link" routerLink="/comment">Comment</a>
         </li>
-        <li class="nav__item" routerLinkActive="active">
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'Key board' ) ? 'red' : 'white' }">
             <a class="nav-link" routerLink="/keyboard">Key board</a>
         </li>
-        <li class="nav__item" routerLinkActive="active">
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'One way binding' ) ? 'red' : 'white' }">
             <a class="nav-link" routerLink="/one-way-binding">One way binding</a>
         </li>
-        <li class="nav__item" routerLinkActive="active">
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'Two way binding' ) ? 'red' : 'white' }">
             <a class="nav-link" routerLink="/two-way-binding">Two way binding</a>
         </li>
-        <li class="nav__item" routerLinkActive="active">
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'Directives' ) ? 'red' : 'white' }">
             <a class="nav-link" routerLink="/route-directive">Directives</a>
         </li>
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+        [ngStyle]="{background: (searchData === 'Editor' ) ? 'red' : 'white' }">
+        <a class="nav-link" routerLink="/editor">Editor</a>
+    </li>
     </ul>
 </nav>

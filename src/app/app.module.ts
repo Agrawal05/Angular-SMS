@@ -30,6 +30,8 @@ import { RouteDirectiveComponent } from './basics/directives/route-directive/rou
 import { NgStyleComponent } from './basics/directives/ng-style/ng-style.component';
 import { NgIfComponent } from './basics/directives/ng-if/ng-if.component';
 import { NgClassComponent } from './basics/directives/ng-class/ng-class.component';
+import { SearchBoxComponent } from './basics/search-box/search-box.component';
+import { EditorComponent } from './editor/editor.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import { NgClassComponent } from './basics/directives/ng-class/ng-class.componen
     RouteDirectiveComponent,
     NgStyleComponent,
     NgIfComponent,
-    NgClassComponent
+    NgClassComponent,
+    SearchBoxComponent,
+    EditorComponent
   ],
   providers: [],
   imports: [
