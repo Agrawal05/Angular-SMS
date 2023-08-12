@@ -23,6 +23,7 @@
     "@ngrx/entity": "^11.1.1",
     "@ngrx/store": "^11.1.1",
     "@ngrx/store-devtools": "^11.1.1",
+    "ace-builds": "^1.24.0",
     "angular-file-uploader": "^7.1.1",
     "bootstrap": "^4.0.0",
     "devtools-detect": "^4.0.1",
