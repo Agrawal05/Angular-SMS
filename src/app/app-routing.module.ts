@@ -18,6 +18,7 @@ import { NgStyleComponent } from './basics/directives/ng-style/ng-style.componen
 import { NgIfComponent } from './basics/directives/ng-if/ng-if.component';
 import { NgClassComponent } from './basics/directives/ng-class/ng-class.component';
 import { EditorComponent } from './editor/editor.component';
+import { SwitchScreenComponent } from './switch-screen/switch-screen.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'Header', pathMatch: "full" },
@@ -38,7 +39,8 @@ export const routes: Routes = [
   { path: 'ng-style', component: NgStyleComponent },
   { path: 'ng-if', component: NgIfComponent },
   { path: 'ng-class', component: NgClassComponent },
-  { path: 'editor', component: EditorComponent }
+  { path: 'editor', component: EditorComponent },
+  { path: 'switch-screen', component: SwitchScreenComponent }
 ];
 
 @NgModule({

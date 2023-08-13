@@ -49,8 +49,12 @@
             <a class="nav-link" routerLink="/route-directive">Directives</a>
         </li>
         <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
-        [ngStyle]="{background: (searchData === 'Editor' ) ? 'red' : 'white' }">
-        <a class="nav-link" routerLink="/editor">Editor</a>
+            [ngStyle]="{background: (searchData === 'Editor' ) ? 'red' : 'white' }">
+            <a class="nav-link" routerLink="/editor">Editor</a>
+        </li>
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+        [ngStyle]="{background: (searchData === 'Switch Screen' ) ? 'red' : 'white' }">
+        <a class="nav-link" routerLink="/switch-screen">Switch Screen</a>
     </li>
     </ul>
 </nav>

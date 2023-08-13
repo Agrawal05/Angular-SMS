@@ -27,10 +27,23 @@ export class DevtoolDetectComponent implements OnInit {
 
   main: any;
   devtool: string = 'hi';
+  isopen: string = 'hii';
 
   constructor() { }
 
   ngOnInit(): void {
+    this.method1();
+    this.areDevToolsOpen().then((open) => {
+      if (open) {
+        this.isopen = 'open';
+        // Perform actions when developer tools are detected
+      } else {
+        this.isopen = 'closed';
+      }
+    });
+  }
+
+  method1() {
     this.main = ({emitEvents = true} = {}) => {
       const widthThreshold = globalThis.outerWidth - globalThis.innerWidth > threshold;
       const heightThreshold = globalThis.outerHeight - globalThis.innerHeight > threshold;
@@ -59,49 +72,27 @@ export class DevtoolDetectComponent implements OnInit {
     };
 
       this.main({emitEvents: false});
-      setInterval(this.main, 10000);
-
-    // if (devtools.isOpen) {
-    //   console.log('Devtools is open!');
-    //   // Add your logic here for when devtools is open
-    // } else {
-    //   console.log('Devtools is closed!');
-    // }
-    // this.isDevToolsOpen = isDevToolsOpen();
-    // if (this.isDevToolsOpen) {
-    //   console.log('Developer tools are open!');
-    //   // Perform additional actions if needed
-    // } else {
-    //   console.log('Developer tools are not open.');
-    //   // Perform alternative actions if needed
-    // }
-
-
-    // window.addEventListener('devtoolschange', function (e) {
-    //       var isOpen = e.detail.isOpen;
-    //       if (isOpen) {
-    //         console.log('Developer tools are open!');
-    //         // Perform actions when the developer tools are open
-    //       } else {
-    //         console.log('Developer tools are closed.');
-    //         // Perform actions when the developer tools are closed
-    //       }
-    //     });
-
+      setInterval(this.main, 1000);
   }
+
+  //second method but not working 100% correct
+  areDevToolsOpen(): Promise<boolean> {
+    return new Promise((resolve) => {
+      const devToolsListener = (e: any) => {
+        // The listener will be triggered when the developer tools are opened
+        resolve(true);
+        window.removeEventListener('devtoolschange', devToolsListener);
+      };
+
+      // Add a listener for the devtoolschange event
+      window.addEventListener('devtoolschange', devToolsListener);
+
+      // Trigger the devtoolschange event
+      console.log('Check for devtools');
+    });
+  }
+
+  
 
 }
 
-// <script src="https://unpkg.com/devtools-detect@1.2.1/dist/index.js"></script>
-// <script>
-//   window.addEventListener('devtoolschange', function (e) {
-//     var isOpen = e.detail.isOpen;
-//     if (isOpen) {
-//       console.log('Developer tools are open!');
-//       // Perform actions when the developer tools are open
-//     } else {
-//       console.log('Developer tools are closed.');
-//       // Perform actions when the developer tools are closed
-//     }
-//   });
-// </script>

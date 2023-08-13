@@ -32,6 +32,7 @@ import { NgIfComponent } from './basics/directives/ng-if/ng-if.component';
 import { NgClassComponent } from './basics/directives/ng-class/ng-class.component';
 import { SearchBoxComponent } from './basics/search-box/search-box.component';
 import { EditorComponent } from './editor/editor.component';
+import { SwitchScreenComponent } from './switch-screen/switch-screen.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { EditorComponent } from './editor/editor.component';
     NgIfComponent,
     NgClassComponent,
     SearchBoxComponent,
-    EditorComponent
+    EditorComponent,
+    SwitchScreenComponent
   ],
   providers: [],
   imports: [
