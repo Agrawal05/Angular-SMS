@@ -2,8 +2,7 @@ import { Component, OnInit, HostListener  } from '@angular/core';
 
 @Component({
   selector: 'app-switch-screen',
-  templateUrl: './switch-screen.component.html',
-  styleUrls: ['./switch-screen.component.css']
+  templateUrl: './switch-screen.component.html'
 })
 export class SwitchScreenComponent implements OnInit {
   window: string = '';
