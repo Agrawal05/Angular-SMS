@@ -33,6 +33,7 @@ import { NgClassComponent } from './basics/directives/ng-class/ng-class.componen
 import { SearchBoxComponent } from './basics/search-box/search-box.component';
 import { EditorComponent } from './editor/editor.component';
 import { SwitchScreenComponent } from './switch-screen/switch-screen.component';
+import { ScreenShotComponent } from './screen-shot/screen-shot.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { SwitchScreenComponent } from './switch-screen/switch-screen.component';
     NgClassComponent,
     SearchBoxComponent,
     EditorComponent,
-    SwitchScreenComponent
+    SwitchScreenComponent,
+    ScreenShotComponent
   ],
   providers: [],
   imports: [

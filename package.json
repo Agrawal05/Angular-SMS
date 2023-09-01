@@ -28,6 +28,7 @@
     "bootstrap": "^4.0.0",
     "devtools-detect": "^4.0.1",
     "font-awesome": "^4.7.0",
+    "html2canvas": "^1.4.1",
     "moment": "^2.29.4",
     "ng-keyboard-shortcuts": "^13.0.8",
     "ngx-pagination": "^3.0.3",

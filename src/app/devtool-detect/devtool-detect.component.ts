@@ -9,7 +9,7 @@ const devtools = {
   
 const threshold = 170;
   
-const emitEvent = (isOpen, orientation) => {
+const emitEvent = (isOpen: boolean, orientation: string) => {
   globalThis.dispatchEvent(new globalThis.CustomEvent('devtoolschange', {
     detail: {
       isOpen,

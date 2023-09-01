@@ -53,8 +53,12 @@
             <a class="nav-link" routerLink="/editor">Editor</a>
         </li>
         <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
-        [ngStyle]="{background: (searchData === 'Switch Screen' ) ? 'red' : 'white' }">
-        <a class="nav-link" routerLink="/switch-screen">Switch Screen</a>
-    </li>
+            [ngStyle]="{background: (searchData === 'Switch Screen' ) ? 'red' : 'white' }">
+            <a class="nav-link" routerLink="/switch-screen">Switch Screen</a>
+        </li>
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'Screen Shot' ) ? 'red' : 'white' }">
+            <a class="nav-link" routerLink="/screen-shot">Screen Shot</a>
+        </li>
     </ul>
 </nav>
