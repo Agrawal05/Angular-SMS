@@ -1,7 +1,6 @@
 <p>screen-shot works!</p>
 <div class="font-weight-bold">
-  Time Left: {{ minutes | number: '2.0-0' }}:{{ seconds | number: '2.0-0'
-  }}
+  Time Left: {{timeLeft}}
 </div>
-
-{{capturedImage}}
+<video #videoElement autoplay [style.display]="'none'"></video>
+<img src="{{dataUrl}}" width="500px" height="500px"/>

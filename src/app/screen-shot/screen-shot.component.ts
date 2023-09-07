@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import html2canvas from 'html2canvas';
 import { Observable, Subscription, interval, timer } from 'rxjs';
 
@@ -7,60 +7,73 @@ import { Observable, Subscription, interval, timer } from 'rxjs';
   templateUrl: './screen-shot.component.html',
   styleUrls: ['./screen-shot.component.css']
 })
-export class ScreenShotComponent implements OnInit {
-  minutes: any;
-  seconds: any
-  startTime = 1000;
-  lastTime: number;
-  timer: Observable<number> | any;
-  subscription: Subscription = new Subscription();
-  ticks: number;
-  capturedImage: any;
-  webCam: any;
-  subscriptions: Subscription = new Subscription();
+export class ScreenShotComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  @ViewChild('videoElement') videoElement: ElementRef;
 
-  ngOnInit(): void {
-    this.initializeTimer();
-    this.webcamAndScreenShotInterval();
+  title = 'HtmlCanvas';
+  timeLeft: number = 60;
+  interval: any;
+  element: any;
+  thecanvas: any;
+  dataUrl: string = '';
+  canvas: any;
+  context: any;
+  video: any;
+  firstTime = true;
+  captureStream: any;
+  screenshotInterval: Subscription;
+  ngOnInit() {
+    this.element = document.body as HTMLCanvasElement;
+
+    this.interval = setInterval(() => {
+      this.timeLeft++;
+    }, 1000)
+    this.captureScreen();
+    this.startScreenshotInterval();
   }
 
-  initializeTimer(): void {
-    this.minutes = Math.floor(this.startTime / 60); // Calculate minutes
-    this.seconds = this.startTime % 60;
-    this.lastTime = this.startTime;
-    this.timer = timer(0, 1000); // Emit value every second
-    this.subscription = this.timer.subscribe((t: any) => {
-      this.ticks = this.startTime - t;
-      this.minutes = Math.floor(this.ticks / 60);
-      this.seconds = this.ticks % 60;
 
+  async captureScreen() {
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    const video: HTMLVideoElement = this.videoElement.nativeElement;
+
+    try {
+      if (this.firstTime) {
+        // Prompt the user for screen selection only the first time
+        this.firstTime = false;
+        this.captureStream = await navigator.mediaDevices.getDisplayMedia();
+        video.srcObject = this.captureStream;
+        await video.play(); // Ensure video is loaded
+      }
+
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+
+      context.drawImage(video, 0, 0, canvas.width, canvas.height);
+      this.dataUrl = canvas.toDataURL('image/png');
+      
+      // Handle the captured frame as needed (e.g., display it, save it)
+      // For example, you can set it as the source of an image tag:
+      // this.capturedImageSrc = frame;
+
+    } catch (err) {
+      console.error('Error: ' + err);
+    }
+  }
+  
+  startScreenshotInterval(): void {
+    this.screenshotInterval = interval(20000).subscribe(async (x) => {
+      // Capture a screenshot every 20 seconds
+      await this.captureScreen();
     });
   }
 
-  async webcamAndScreenShotInterval(): Promise<void> {
-    this.subscriptions.add(
-      this.webCam = interval(10000).subscribe(async (x) => {
-        await this.clickme();
-        console.log(this.capturedImage)
-      })
-    );
+  ngOnDestroy(): void {
+    if (this.dataUrl) {
+      this.captureStream.getTracks().forEach(track => track.stop());
+    }
   }
 
-  async clickme(): Promise<void> {
-    const canvas = await html2canvas(document.body);
-    this.capturedImage = canvas.toDataURL();
-
-    await new Promise<void>((resolve) => {
-      canvas.toBlob(async (blob: any) => {
-        var reader = new FileReader();
-        reader.readAsDataURL(blob);
-        reader.onloadend = function () {
-          let base64data = reader.result;
-          resolve();
-        };
-      });
-    });
-  }
 }
