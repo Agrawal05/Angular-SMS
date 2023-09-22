@@ -1,0 +1,8 @@
+One way to use templateReferenceVariable
+
+<input type="text" #templateReferenceVariable (keyup)="0">
+<p>{{templateReferenceVariable.value}}</p>
+
+Second way to use templateReferenceVariable
+<input type="text" #templateReferenceVariable1>
+<button (click)="reference(templateReferenceVariable1)">Reference</button>

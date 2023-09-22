@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   tabNameMatches(searchData: string): boolean {
     console.log(searchData)
     const tabNames = ['AddStudent', 'GetStudents', 'Calendar', 'ListEvents', 'WebCam', 'Devtool Detect', 'Comment', 'Key board', 
-    'One way binding', 'Two way binding', 'Directives', 'Editor', 'Switch Screen', 'Screen Shot'];
+    'One way binding', 'Two way binding', 'Directives', 'Editor', 'Switch Screen', 'Screen Shot', 'TemplateReference Variable'];
     return tabNames.some((tabName) => tabName.toLowerCase().includes(searchData.toLowerCase()));
   }
 

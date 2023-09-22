@@ -20,6 +20,7 @@ import { NgClassComponent } from './basics/directives/ng-class/ng-class.componen
 import { EditorComponent } from './editor/editor.component';
 import { SwitchScreenComponent } from './switch-screen/switch-screen.component';
 import { ScreenShotComponent } from './screen-shot/screen-shot.component';
+import { TemplateReferenceComponent } from './basics/template-reference/template-reference.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'Header', pathMatch: "full" },
@@ -42,7 +43,8 @@ export const routes: Routes = [
   { path: 'ng-class', component: NgClassComponent },
   { path: 'editor', component: EditorComponent },
   { path: 'switch-screen', component: SwitchScreenComponent },
-  { path: 'screen-shot', component: ScreenShotComponent }
+  { path: 'screen-shot', component: ScreenShotComponent },
+  { path: 'templatereference-variable', component: TemplateReferenceComponent}
 ];
 
 @NgModule({

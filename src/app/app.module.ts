@@ -34,6 +34,7 @@ import { SearchBoxComponent } from './basics/search-box/search-box.component';
 import { EditorComponent } from './editor/editor.component';
 import { SwitchScreenComponent } from './switch-screen/switch-screen.component';
 import { ScreenShotComponent } from './screen-shot/screen-shot.component';
+import { TemplateReferenceComponent } from './basics/template-reference/template-reference.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { ScreenShotComponent } from './screen-shot/screen-shot.component';
     SearchBoxComponent,
     EditorComponent,
     SwitchScreenComponent,
-    ScreenShotComponent
+    ScreenShotComponent,
+    TemplateReferenceComponent
   ],
   providers: [],
   imports: [
