@@ -61,8 +61,12 @@
             <a class="nav-link" routerLink="/screen-shot">Screen Shot</a>
         </li>
         <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
-        [ngStyle]="{background: (searchData === 'TemplateReference Variable' ) ? 'red' : 'white' }">
-        <a class="nav-link" routerLink="/templatereference-variable">TemplateReference Variable</a>
-    </li>
+            [ngStyle]="{background: (searchData === 'TemplateReference Variable' ) ? 'red' : 'white' }">
+            <a class="nav-link" routerLink="/templatereference-variable">TemplateReference Variable</a>
+        </li>
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'View Child' ) ? 'red' : 'white' }">
+            <a class="nav-link" routerLink="/view-child">View Child</a>
+        </li>
     </ul>
 </nav>

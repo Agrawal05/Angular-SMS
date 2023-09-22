@@ -21,6 +21,7 @@ import { EditorComponent } from './editor/editor.component';
 import { SwitchScreenComponent } from './switch-screen/switch-screen.component';
 import { ScreenShotComponent } from './screen-shot/screen-shot.component';
 import { TemplateReferenceComponent } from './basics/template-reference/template-reference.component';
+import { ViewChildComponent } from './basics/view-child/view-child.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'Header', pathMatch: "full" },
@@ -44,7 +45,8 @@ export const routes: Routes = [
   { path: 'editor', component: EditorComponent },
   { path: 'switch-screen', component: SwitchScreenComponent },
   { path: 'screen-shot', component: ScreenShotComponent },
-  { path: 'templatereference-variable', component: TemplateReferenceComponent}
+  { path: 'templatereference-variable', component: TemplateReferenceComponent},
+  { path: 'view-child', component: ViewChildComponent}
 ];
 
 @NgModule({

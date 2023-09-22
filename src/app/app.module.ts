@@ -35,6 +35,7 @@ import { EditorComponent } from './editor/editor.component';
 import { SwitchScreenComponent } from './switch-screen/switch-screen.component';
 import { ScreenShotComponent } from './screen-shot/screen-shot.component';
 import { TemplateReferenceComponent } from './basics/template-reference/template-reference.component';
+import { ViewChildComponent } from './basics/view-child/view-child.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { TemplateReferenceComponent } from './basics/template-reference/template
     EditorComponent,
     SwitchScreenComponent,
     ScreenShotComponent,
-    TemplateReferenceComponent
+    TemplateReferenceComponent,
+    ViewChildComponent
   ],
   providers: [],
   imports: [
