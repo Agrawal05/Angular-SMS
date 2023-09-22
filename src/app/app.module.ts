@@ -36,6 +36,9 @@ import { SwitchScreenComponent } from './switch-screen/switch-screen.component';
 import { ScreenShotComponent } from './screen-shot/screen-shot.component';
 import { TemplateReferenceComponent } from './basics/template-reference/template-reference.component';
 import { ViewChildComponent } from './basics/view-child/view-child.component';
+import { ViewEncapsulationComponent } from './basics/view-encapsulation/view-encapsulation.component';
+import { ViewEncapsulationFirstComponent } from './basics/view-encapsulation-first/view-encapsulation-first.component';
+import { ViewEncapsulationSecondComponent } from './basics/view-encapsulation-second/view-encapsulation-second.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +72,10 @@ import { ViewChildComponent } from './basics/view-child/view-child.component';
     SwitchScreenComponent,
     ScreenShotComponent,
     TemplateReferenceComponent,
-    ViewChildComponent
+    ViewChildComponent,
+    ViewEncapsulationComponent,
+    ViewEncapsulationFirstComponent,
+    ViewEncapsulationSecondComponent
   ],
   providers: [],
   imports: [
