@@ -43,7 +43,9 @@ export class ScreenShotComponent implements OnInit, OnDestroy {
       if (this.firstTime) {
         // Prompt the user for screen selection only the first time
         this.firstTime = false;
-        this.captureStream = await navigator.mediaDevices.getDisplayMedia();
+        this.captureStream = await (navigator.mediaDevices as any).getDisplayMedia({
+          video: true,
+        });
         video.srcObject = this.captureStream;
         await video.play(); // Ensure video is loaded
       }
@@ -53,7 +55,7 @@ export class ScreenShotComponent implements OnInit, OnDestroy {
 
       context.drawImage(video, 0, 0, canvas.width, canvas.height);
       this.dataUrl = canvas.toDataURL('image/png');
-      
+
       // Handle the captured frame as needed (e.g., display it, save it)
       // For example, you can set it as the source of an image tag:
       // this.capturedImageSrc = frame;
@@ -62,7 +64,7 @@ export class ScreenShotComponent implements OnInit, OnDestroy {
       console.error('Error: ' + err);
     }
   }
-  
+
   startScreenshotInterval(): void {
     this.screenshotInterval = interval(20000).subscribe(async (x) => {
       // Capture a screenshot every 20 seconds
