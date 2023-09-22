@@ -17,4 +17,8 @@ export class TemplateReferenceComponent implements OnInit {
     window.confirm('Helllo ' + input.value);
   }
 
+  sayHello(): void{
+    window.confirm('Hellllllllllllllllllllllllooooooooooooooooooooo');
+  }
+
 }

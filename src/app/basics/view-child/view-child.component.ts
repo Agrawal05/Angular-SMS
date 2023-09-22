@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { TemplateReferenceComponent } from '../template-reference/template-reference.component';
 
 @Component({
   selector: 'app-view-child',
@@ -8,7 +9,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 export class ViewChildComponent implements OnInit {
 
   @ViewChild('dob') DOB: ElementRef;
-  @ViewChild('age') Age: ElementRef;
+  @ViewChild("age") Age: ElementRef;
+  @ViewChild(TemplateReferenceComponent, {static: true}) tempRefComp: TemplateReferenceComponent;
 
   constructor() { }
 
