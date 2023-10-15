@@ -72,5 +72,9 @@
             [ngStyle]="{background: (searchData === 'View Encapsulation' ) ? 'red' : 'white' }">
             <a class="nav-link" routerLink="/view-encapsultion">View Encapsulation</a>
         </li>
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'Ng Content' ) ? 'red' : 'white' }">
+            <a class="nav-link" routerLink="/ng-content">Ng Content</a>
+        </li>
     </ul>
 </nav>

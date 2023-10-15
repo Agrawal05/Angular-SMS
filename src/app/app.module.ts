@@ -39,6 +39,8 @@ import { ViewChildComponent } from './basics/view-child/view-child.component';
 import { ViewEncapsulationComponent } from './basics/view-encapsulation/view-encapsulation.component';
 import { ViewEncapsulationFirstComponent } from './basics/view-encapsulation-first/view-encapsulation-first.component';
 import { ViewEncapsulationSecondComponent } from './basics/view-encapsulation-second/view-encapsulation-second.component';
+import { NgContentComponent } from './basics/ng-content/ng-content.component';
+import { NgContentChildComponent } from './basics/ng-content/ng-content-child/ng-content-child.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +77,9 @@ import { ViewEncapsulationSecondComponent } from './basics/view-encapsulation-se
     ViewChildComponent,
     ViewEncapsulationComponent,
     ViewEncapsulationFirstComponent,
-    ViewEncapsulationSecondComponent
+    ViewEncapsulationSecondComponent,
+    NgContentComponent,
+    NgContentChildComponent,
   ],
   providers: [],
   imports: [
