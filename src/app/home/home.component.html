@@ -76,5 +76,9 @@
             [ngStyle]="{background: (searchData === 'Ng Content' ) ? 'red' : 'white' }">
             <a class="nav-link" routerLink="/ng-content">Ng Content</a>
         </li>
+        <li class="nav__item" routerLinkActive="active" *ngIf="searchData === '' || tabNameMatches(searchData)"
+            [ngStyle]="{background: (searchData === 'Ng Content' ) ? 'red' : 'white' }">
+            <a class="nav-link" routerLink="/lifecycle-hook">LifeCycle Hook</a>
+        </li>
     </ul>
 </nav>

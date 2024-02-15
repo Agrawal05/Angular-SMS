@@ -21,9 +21,9 @@ export class HomeComponent implements OnInit {
 
   tabNameMatches(searchData: string): boolean {
     console.log(searchData)
-    const tabNames = ['AddStudent', 'GetStudents', 'Calendar', 'ListEvents', 'WebCam', 'Devtool Detect', 'Comment', 'Key board', 
-    'One way binding', 'Two way binding', 'Directives', 'Editor', 'Switch Screen', 'Screen Shot', 'TemplateReference Variable', 
-    'View Child', 'View Encapsulation', 'Ng Content'];
+    const tabNames = ['AddStudent', 'GetStudents', 'Calendar', 'ListEvents', 'WebCam', 'Devtool Detect', 'Comment', 'Key board',
+      'One way binding', 'Two way binding', 'Directives', 'Editor', 'Switch Screen', 'Screen Shot', 'TemplateReference Variable',
+      'View Child', 'View Encapsulation', 'Ng Content', 'LifeCycle Hook'];
     return tabNames.some((tabName) => tabName.toLowerCase().includes(searchData.toLowerCase()));
   }
 

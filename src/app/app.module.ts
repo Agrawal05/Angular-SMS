@@ -41,6 +41,8 @@ import { ViewEncapsulationFirstComponent } from './basics/view-encapsulation-fir
 import { ViewEncapsulationSecondComponent } from './basics/view-encapsulation-second/view-encapsulation-second.component';
 import { NgContentComponent } from './basics/ng-content/ng-content.component';
 import { NgContentChildComponent } from './basics/ng-content/ng-content-child/ng-content-child.component';
+import { LifecycleHookComponent } from './basics/lifecycle-hook/lifecycle-hook.component';
+import { UseLifecycleHookComponent } from './basics/use-lifecycle-hook/use-lifecycle-hook.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +82,8 @@ import { NgContentChildComponent } from './basics/ng-content/ng-content-child/ng
     ViewEncapsulationSecondComponent,
     NgContentComponent,
     NgContentChildComponent,
+    LifecycleHookComponent,
+    UseLifecycleHookComponent,
   ],
   providers: [],
   imports: [
