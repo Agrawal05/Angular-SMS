@@ -43,6 +43,9 @@ import { NgContentComponent } from './basics/ng-content/ng-content.component';
 import { NgContentChildComponent } from './basics/ng-content/ng-content-child/ng-content-child.component';
 import { LifecycleHookComponent } from './basics/lifecycle-hook/lifecycle-hook.component';
 import { UseLifecycleHookComponent } from './basics/use-lifecycle-hook/use-lifecycle-hook.component';
+import { ParentContentComponent } from './basics/parent-content/parent-content.component';
+import { ParentContentChildComponent } from './basics/parent-content/parent-content-child/parent-content-child.component';
+import { RendererDirective } from './basics/directives/renderer.directive';
 
 @NgModule({
   declarations: [
@@ -84,6 +87,9 @@ import { UseLifecycleHookComponent } from './basics/use-lifecycle-hook/use-lifec
     NgContentChildComponent,
     LifecycleHookComponent,
     UseLifecycleHookComponent,
+    ParentContentComponent,
+    ParentContentChildComponent,
+    RendererDirective,
   ],
   providers: [],
   imports: [

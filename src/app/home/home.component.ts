@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     console.log(searchData)
     const tabNames = ['AddStudent', 'GetStudents', 'Calendar', 'ListEvents', 'WebCam', 'Devtool Detect', 'Comment', 'Key board',
       'One way binding', 'Two way binding', 'Directives', 'Editor', 'Switch Screen', 'Screen Shot', 'TemplateReference Variable',
-      'View Child', 'View Encapsulation', 'Ng Content', 'LifeCycle Hook'];
+      'View Child', 'View Encapsulation', 'Ng Content', 'LifeCycle Hook', 'Content Child'];
     return tabNames.some((tabName) => tabName.toLowerCase().includes(searchData.toLowerCase()));
   }
 

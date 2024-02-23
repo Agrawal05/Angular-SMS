@@ -25,6 +25,7 @@ import { ViewChildComponent } from './basics/view-child/view-child.component';
 import { ViewEncapsulationComponent } from './basics/view-encapsulation/view-encapsulation.component';
 import { NgContentComponent } from './basics/ng-content/ng-content.component';
 import { UseLifecycleHookComponent } from './basics/use-lifecycle-hook/use-lifecycle-hook.component';
+import { ParentContentComponent } from './basics/parent-content/parent-content.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'Header', pathMatch: "full" },
@@ -52,7 +53,8 @@ export const routes: Routes = [
   { path: 'view-child', component: ViewChildComponent},
   { path: 'view-encapsultion', component: ViewEncapsulationComponent},
   { path: 'ng-content', component: NgContentComponent},
-  { path: 'lifecycle-hook', component: UseLifecycleHookComponent}
+  { path: 'lifecycle-hook', component: UseLifecycleHookComponent},
+  {path: 'content-child', component: ParentContentComponent}
 
 ];
 
